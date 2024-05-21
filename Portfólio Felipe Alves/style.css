@@ -24,6 +24,8 @@ html{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
   }
+  /* root e importações */
+
   :root{
     --cor-0: #f9f9f9;
     --cor-1: #a4a4a4;
@@ -318,6 +320,7 @@ html{
   img {
     max-width: 100%;
     display: block;
+
   }
 
 .main-conteudo a{
@@ -377,7 +380,7 @@ html{
   }
   @media (max-width: 800px){
     .header a{
-      box-shadow: 15px 15px 30px #020202, -15px -15px 30px #080808;
+      box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
 
     }
   }
@@ -448,6 +451,7 @@ html{
   
   .main-img{
     margin: auto;
+    
 
   }
 
@@ -508,12 +512,15 @@ html{
   
     .main-img{
       display: none;
+      
     }
   
     .main-conteudo a{
       padding: 8px 16px;
     }
   }
+  /* projetos */
+
 .projetos h2{
     text-align: center;
     margin-bottom: 60px;
@@ -566,90 +573,8 @@ html{
       padding: 15px 10px;
     }
   }
-  .minhas-skills h2 {
-    text-align: center;
-    margin-bottom: 60px;
-  }
   
-  .minhas-skills h2 {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .lista-skills {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    justify-content: space-around;
-    gap: 10px;
-  }
-  
-  .lista-skills li {
-    
-    margin-top: 15vh;
-    height: 22vh;
-    width: 30vh;
-    align-items: center;
-    padding: 16px;
-    background-color: var(--cor-4);
-    box-shadow: 15px 15px 30px #000000, -15px -15px 30px #0e0e0e;
-    border-radius: 5px;
-  }
-  .lista-skills li:hover{
-    background-color: var(--cor-3);
-  }
-  .lista-skills img {
-
-    justify-content: center;
-  }
-  .lista-skills h3{
-  justify-content: center;
-  }
-
-  .lista-skills h4{
-   justify-content: center;
-   font-size: 18px;
-  }
-
-  .lista-skills p{
-    color: var(--cor-1);
-    font-size: 16px;
-    margin-top: 3vh;
-  
-  }
-  
-  @media (max-width:800px){
-    .lista-skills {
-      grid-template-columns: 1fr 1fr 1fr;
-      flex-direction: column;
-      align-items: center;
-      margin-top: -2vh;
-
-    }
-    .lista-skills li{
-      margin-top: 2vh;
-      height: 30vh;
-      width: 38vh;
-    }
-    .lista-skills li img {
-    justify-content: center;
-  
-    }
-    .lista-skills h3{
-     justify-content: center;
-    }
-    .lista-skills h4{
-      justify-content: center;
-    }
-    .lista-skills h6{
-      margin-top: -2vh;
-      font-size: 15px;
-    }
-
-
-  }
-  
+  /* sobre mim */
 .sobre h2{
     text-align: center;
     margin-bottom: 60px;
@@ -674,6 +599,11 @@ html{
     height: 15%;
     width: 65%; 
   }
+  .imgf img{
+    box-shadow: 15px 15px 30px #000000, -15px -15px 30px #0e0e0e;
+
+
+  }
   .imgf:hover{
     transform: scale(1.07);
     transition: .6s;
@@ -690,7 +620,11 @@ html{
     background-color: transparent;
     color: white;
     border-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: arial;
   }
+  
 
   /* footer */
   #scrollTopButton{
@@ -732,6 +666,7 @@ html{
       opacity: 1;
     }
   }
+  /* gotop */
   .tooltip{
     position: absolute;
     z-index: 500;
@@ -750,21 +685,26 @@ html{
 strong{
   color: var(--cor-p1);
 }
-#knowledge header h2 {
-  margin-bottom: 6rem;
-  font-size: 26px;
+/* conhecimentos */
+#conhecimentos h2 {
   justify-content: center;
   display: flex;
   color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+}
+#conhecimentos h3{
+  color: #fff;
 }
 
-#knowledge .cards {
+#conhecimentos ul {
+  margin-top: 15%;
   display: flex;
   gap: 3.2rem;
   justify-content: center;
 }
 
-#knowledge .card {
+#conhecimentos li{
   padding: 2.8rem;
   text-align: center;
   color: var(--cor-2);
@@ -772,41 +712,39 @@ strong{
   border-radius: 0.6rem;
   box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
   transition: 400ms;
-  width: 15%;
+  width: 50%;
 }
 
 
-#knowledge .card:hover {
+#conhecimentos li:hover {
   background: var(--cor-4);
 }
 
-#knowledge .card h3 {
+#knowledge  h3 {
   margin-block: 1.6rem;
 }
 
-#knowledge .card img {
+#conhecimentos li img {
   width: 4rem;
  margin-left: 39%;
 }
 @media (max-width:800px){
 
-  .cards {
+  #conhecimentos ul {
     flex-direction: column;
-    color: var(--cor-2);
-    margin-left: 30px;
-    margin-top: -4vh;
+    color: var(--cor-4);
+    margin-left: 18px;
+    margin-top: 10vh;
     border-radius: 0.6rem;
-    box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
-    transition: 400ms;
-    
+
   }
-  #knowledge .card{
+  #conhecimentos li{
     width: 69%;
-    
+    height: 28vh;
   }
-  #knowledge .card img {
+  #conhecimentos li img {
     width: 4rem;
-   margin-left: 37%;
+   margin-left: 36%;
   }
   
 }
